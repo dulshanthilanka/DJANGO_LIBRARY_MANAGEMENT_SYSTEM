@@ -1,0 +1,17 @@
+{% extends 'system/base.html' %}
+{% block content2 %}
+  SIGNUP PAGE FOR BORROW BOOK
+{% endblock content2 %}
+{% block content1 %}
+  <form method="POST">
+    {% csrf_token %}
+        <table>
+            <tr>
+                {{ form.as_p }}
+            </tr>
+            <tr>
+                <button type="submit"> SIGN UP </button>
+            </tr>
+        </table>
+  </form>
+{% endblock content1 %}

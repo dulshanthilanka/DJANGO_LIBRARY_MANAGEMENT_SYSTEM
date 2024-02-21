@@ -1,0 +1,21 @@
+{% extends 'system/base.html' %}
+{% block content2 %}
+  LOGIN PAGE
+{% endblock content2 %}
+{% block content1 %}
+  <form method="POST">
+    {% csrf_token %}
+        <table>
+            <tr>
+                {{ form.as_p }}
+            </tr>
+            <tr>
+                <button type="submit"> LOG IN </button>
+            </tr>
+            <tr>
+                <a href="{% url 'signup-page' %}"><small> CREATE NEW ACCOUNT </small></a>
+            </tr>
+            
+        </table>
+  </form>
+{% endblock content1 %}
